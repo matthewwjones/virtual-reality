@@ -1,0 +1,5594 @@
+#VRML V2.0 utf8
+
+WorldInfo
+{
+	title "3D Oven"
+	info	"Author: Matthew Jones
+			 ID: 321972"
+}
+
+
+Viewpoint
+{
+	position 0 -5 30 
+	orientation 0 0 0 0
+	description "ViewPoint" 
+}
+
+Viewpoint
+{
+	position  0 20 40
+	orientation	1 0 0 -0.4375
+	description "Front from 45 degrees"
+}
+
+NavigationInfo 
+{
+	headlight TRUE
+	type "EXAMINE"
+}
+ 
+#########################################################################################################
+#                                              MAIN UNIT                                                #
+#########################################################################################################
+
+Group
+{
+	children
+    [
+	    # BACK OVEN PANEL
+        Transform
+        {
+    	    translation     0.0  -3.25  -20
+            children
+            [
+        		#Back panel
+            	Shape
+                {
+                	appearance Appearance
+                    {
+                    	material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                	}
+                    geometry Box
+                    {
+                    	size 15.0 16 1.0
+                    }
+            	}
+            ]
+        }
+                
+        # BACK LEFT OVEN EDGE
+        Transform
+        {
+            translation     -7.5 -5 -20
+            center 0.0 0.0 0.0
+            children
+            [
+            	Shape
+            	{
+                    appearance Appearance
+                    {
+						material Material 
+						{
+						  diffuseColor .38 .38 .38
+						  shininess .23
+						  specularColor 1 .86 .46
+						  ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+						height 12.5
+						radius 0.5
+                    }
+                }
+            ]
+        }
+
+        # BACK RIGHT OVEN EDGE
+        Transform
+        {
+            translation        7.5 -5 -20
+            center 0.0 0.0 0.0
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 12.5
+                        radius 0.5
+                    }
+                }
+            ]
+    	}
+
+        # FRONT RIGHT OVEN EDGE
+        Transform
+        {
+            translation        7.5 -5 -10
+            center 0.0 0.0 0.0
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                            material Material 
+							{
+								diffuseColor .38 .38 .38
+								shininess .23
+								specularColor 1 .86 .46
+								ambientIntensity 0
+							}
+                    }
+                    geometry Cylinder
+                    {
+                            height 12.5
+                            radius 0.5
+                    }
+                }
+            ]
+        }
+
+        # FRONT LEFT OVEN EDGE
+        Transform
+        {
+        	translation        -7.5 -5 -10
+        	center 0.0 0.0 0.0
+        	children
+        	[
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 12.5
+                        radius 0.5
+                    }
+                }
+        	]
+        }
+
+
+        #BOTTOM OVEN PANEL
+        Transform
+        {
+            translation        0.0 -11.25 -15
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                        size 15.0 1.0 10.0
+                    }
+                }
+            ]
+        }
+
+
+        # LEFT OVEN SIDE
+        Transform
+        {
+            translation        -7.5 -5 -15
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                         material Material 
+						 {
+							 diffuseColor .38 .38 .38
+							 shininess .23
+							 specularColor 1 .86 .46
+							 ambientIntensity 0
+						 }
+                    }
+                    geometry Box
+                    {
+                         size 1.0 12.5 10
+                    }
+                }
+            ]
+        }
+
+        # RIGHT OVEN SIDE
+        Transform
+        {
+            translation        7.5 -5 -15
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                    	size 1.0 12.5 10
+                    }
+                }
+            ]
+        }
+
+
+
+        # OVEN ROOF PANEL
+        Transform
+        {
+            translation        0.0 1.25 -15
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                        size 15 1.0 10
+                    }
+                }
+            ]
+        }
+
+
+
+        # BOTTOM REAR ROUNDED EDGE
+        Transform
+        {
+            translation        0 -11.25 -20
+            rotation 0 0 1 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 15
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+
+
+        # REAR CONTROL PANEL ROUNDED EDGE (LEFT)
+        Transform
+        {
+            translation        7.5 3 -20
+            rotation 0 0 1 0
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 3.5
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+
+        # REAR CONTROL PANEL ROUNDED EDGE (RIGHT)
+        Transform
+        {
+            translation        -7.5 3 -20
+            rotation 0 0 1 0
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 3.5
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+
+
+        # BOTTOM ROUNDED EDGE (RIGHT)
+        Transform
+        {
+            translation        7.5 -11.25 -15
+            rotation 1 0 0 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 10
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+
+        # BOTTOM ROUNDED EDGE (LEFT)
+        Transform
+        {
+            translation        -7.5 -11.25 -15
+            rotation 1 0 0 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 10
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+	]
+}
+
+#########################################################################################################
+#                                               VERTICES                                                #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		# BOTTOM VERTEX (REAR LEFT)
+        Transform
+        {
+            translation -7.5 -11.25 -20
+            children
+            [
+
+				Shape
+				{
+					appearance Appearance
+					{
+    					material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+					}
+					geometry Sphere
+					{
+    					radius 0.5
+					}
+				}
+            ]
+        }
+
+        # BOTTOM VERTEX (REAR RIGHT)
+        Transform
+        {
+            translation 7.5 -11.25 -20
+            children
+            [
+
+				Shape
+				{
+					appearance Appearance
+					{
+        				material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+					}
+					geometry Sphere
+					{
+        				radius 0.5
+					}
+				}
+            ]
+        }
+            
+        # TOP VERTEX (REAR LEFT)
+        Transform
+        {
+			translation -7.5 4.75 -20
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.5
+					}
+				}
+			]
+        }
+
+		# TOP VERTEX (REAR RIGHT)
+		Transform
+		{
+			translation 7.5 4.75 -20
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.5
+					}
+				}
+			]
+		}
+
+		# BOTTOM VERTEX (FRONT LEFT)
+		Transform
+		{
+			translation -7.5 -11.25 -10
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+		# BOTTOM VERTEX (FRONT RIGHT)
+		Transform
+		{
+			translation 7.5 -11.25 -10
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+		# MID VERTEX (FRONT LEFT)
+		Transform
+		{
+			translation -7.5 1.25 -10
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+		# MID VERTEX (FRONT RIGHT)
+		Transform
+		{
+			translation 7.5 1.25 -10
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+        # TOP VERTEX (FRONT LEFT)
+        Transform
+        {
+            translation -7.5 4.75 -12.5
+            children
+            [
+
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+            ]
+        }
+
+		# TOP VERTEX (FRONT RIGHT)
+		Transform
+		{
+			translation 7.5 4.75 -12.5
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+		# MID REAR VERTEX (FRONT LEFT)
+		Transform
+		{
+			translation -7.5 1.25 -12.5
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+		# MID REAR VERTEX (FRONT RIGHT)
+		Transform
+		{
+			translation 7.5 1.25 -12.5
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Sphere
+    				{
+            			radius 0.5
+    				}
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                             CONTROL PANEL                                             #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		# TOP ROUNDED EDGE (RIGHT)
+		Transform
+		{
+			translation        7.5 4.75 -16.25
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Cylinder
+    				{
+            			height 7.5
+            			radius 0.5
+    				}
+				}
+			]		
+		}
+
+
+		# TOP ROUNDED EDGE (LEFT)
+		Transform
+		{
+			translation        -7.5 4.75 -16.25
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Cylinder
+    				{
+            			height 7.5
+            			radius 0.5
+    				}
+				}
+			]
+		}
+ 
+		# TOP ROUNDED EDGE (FRONT RIGHT)
+		Transform
+		{
+			translation        7.5 3 -12.5
+			rotation 0 0 1 0
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Cylinder
+    				{
+            			height 3.5
+            			radius 0.5
+    				}
+				}
+			]
+		}             
+
+
+		# TOP ROUNDED EDGE (FRONT LEFT)
+		Transform
+		{
+			translation        -7.5 3 -12.5
+			rotation 0 0 1 0
+			children
+			[
+				Shape
+				{
+    				appearance Appearance
+    				{
+            			material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+    				}
+    				geometry Cylinder
+    				{
+            			height 3.5
+            			radius 0.5
+    				}
+				}
+			]
+		}
+
+
+		# CONTROL PANEL SIDE (BACK RIGHT)
+		Transform
+		{
+        	translation 7.5 3.0 -16.25
+        	children
+        	[
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                        size 1.0 3.5 7.5
+                    }
+                }
+        	]
+		}
+
+        # CONTROL PANEL SIDE (BACK LEFT)
+        Transform
+        {
+        	translation -7.5 3.0 -16.25
+        	children
+        	[
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                    	size 1.0 3.5 7.5
+                    }
+                }
+        	]
+        }
+
+
+
+        # CONTROL PANEL FRONT (DIAL PANEL)
+        Transform
+        {
+            translation 0.0 3 -12.5
+			children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                        size 15.0 3.5 1
+                    }
+                }
+            ]
+        }
+
+                
+    	# TOP REAR ROUNDED EDGE
+    	Transform
+    	{
+            translation	0 4.75 -20
+            rotation 0 0 1 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 15
+                        radius 0.5
+                    }
+                }
+            ]
+    	}
+
+        # MID FRONT ROUNDED EDGE
+        Transform
+        {
+        	translation        0 1.25 -10
+        	rotation 0 0 1 1.57
+        	children
+        	[
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 15
+                        radius 0.5
+                    }
+                }
+        	]
+        }
+
+
+        # TOP FRONT ROUNDED EDGE
+        Transform
+        {
+            translation        0 4.75 -12.5
+            rotation 0 0 1 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 15
+                        radius 0.5
+                    }
+                }
+            ]
+        }
+
+
+        # CONTROL PANEL TOP
+        Transform
+        {
+            translation        0.0 4.75 -16.25
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+                    }
+                    geometry Box
+                    {
+                         size 15 1.0 7.5
+                    }
+                }
+            ]
+        } 
+               
+        # MID ROUNDED EDGE HORIZONTAL (FRONT RIGHT)
+        Transform
+        {
+            translation        7.5 1.25 -11.25
+            rotation 1 0 0 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 2.5
+                        radius 0.5
+                    }
+                }
+            ]
+        }             
+
+
+        # MID ROUNDED EDGE HORIZONTAL (FRONT LEFT)
+        Transform
+        {
+            translation        -7.5 1.25 -11.25
+            rotation 1 0 0 1.57
+            children
+            [
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        material Material 
+						{	
+							diffuseColor .38 .38 .38
+							shininess .23
+							specularColor 1 .86 .46
+							ambientIntensity 0
+						}
+                    }
+                    geometry Cylinder
+                    {
+                        height 2.5
+                        radius 0.5
+                    }
+                }
+            ]
+        }  
+	]
+}
+
+#########################################################################################################
+#                                          CONTROL PANEL DIALS                                          #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		# Oven Dial	1
+        Transform
+        {
+			translation	2.5 3.25 -12
+            rotation	1 0 0 1.57
+            children
+            [
+				Shape
+                {
+					appearance Appearance
+                    {
+						material Material {}
+                    }
+                    geometry Cylinder
+                    {
+    	                height 0.5
+        	            radius 0.001
+            	    }
+            	}
+
+				DEF dial1_move TouchSensor
+				{
+					
+				}
+			    
+				DEF dial1 Transform
+				{
+					translation	0 0 0
+					rotation 0 1 0 1.57
+					children
+					[	
+						# Dial 1 Body
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material 
+								{
+									diffuseColor .3 .3 .3 
+									specularColor .5 .5 .5
+									emissiveColor .15 .15 .15
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								height 0.5
+								radius 0.5
+							}
+						}
+						# Dial 1 Marker
+						Transform
+						{
+							translation	0.25 0.25 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+                				{
+									appearance Appearance
+                				    {
+										material Material 
+										{
+											diffuseColor .75 .75 .75
+											specularColor .5 .5 .5
+											emissiveColor .15 .15 .15
+											ambientIntensity 0
+										}
+                				    }
+                					geometry Cylinder
+                    				{
+    	                				height 0.5
+        	            				radius 0.125
+            	    				}
+            					}
+
+							]
+						}
+					]
+				}
+        	]
+	    } 			    
+  
+        # Oven Dial	2
+        Transform
+        {
+        	translation	-2.5 3.25 -12
+            rotation	1 0 0 1.57
+            children
+            [
+				Shape
+                {
+					appearance Appearance
+                    {
+						material Material {}
+                    }
+                    geometry Cylinder
+                    {
+    	                height 0.5
+        	            radius 0.001
+            	    }
+            	}
+
+				DEF	dial2_move TouchSensor
+				{
+
+				}
+			    
+				DEF dial2 Transform
+				{
+					translation	0 0 0
+					rotation 0 1 0 1.57
+					children
+					[	
+						# Dial 2 Body
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material 
+								{
+									diffuseColor .3 .3 .3 
+									specularColor .5 .5 .5
+									emissiveColor .15 .15 .15
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								height 0.5
+								radius 0.5
+							}
+						}
+						# Dial 2 Marker
+						Transform
+						{
+							translation	0.25 0.25 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+                				{
+									appearance Appearance
+                				    {
+										material Material 
+										{
+											diffuseColor .75 .75 .75
+											specularColor .5 .5 .5
+											emissiveColor .15 .15 .15
+											ambientIntensity 0
+										}
+                				    }
+                					geometry Cylinder
+                    				{
+    	                				height 0.5
+        	            				radius 0.125
+            	    				}
+            					}
+
+							]
+						}
+					]
+				}
+        	]
+	    } 			    
+		
+    	# Oven Dial	3
+        Transform
+	    {
+			translation 	0 3.25 -12
+            rotation 1 0 0 1.57
+            children
+            [
+				Shape
+                {
+					appearance Appearance
+                    {
+						material Material {}
+                    }
+                    geometry Cylinder
+                    {
+    	                height 0.5
+        	            radius 0.001
+            	    }
+            	}
+
+				DEF	dial3_move TouchSensor
+				{
+					
+				}
+			    
+				DEF dial3 Transform
+				{
+					translation	0 0 0
+					rotation 0 1 0 1.57
+					children
+					[	
+						# Dial 3 Body
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material 
+								{
+									diffuseColor .3 .3 .3 
+									specularColor .5 .5 .5
+									emissiveColor .15 .15 .15
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								height 0.5
+								radius 0.5
+							}
+						}
+						# Dial 3 Marker
+						Transform
+						{
+							translation	0.25 0.25 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+                				{
+									appearance Appearance
+                				    {
+										material Material 
+										{
+											diffuseColor .75 .75 .75
+											specularColor .5 .5 .5
+											emissiveColor .15 .15 .15
+											ambientIntensity 0
+										}
+                				    }
+                					geometry Cylinder
+                    				{
+    	                				height 0.5
+        	            				radius 0.125
+            	    				}
+            					}
+							]
+						}
+					]
+				}
+        	]
+	    } 			                     
+
+        # Oven Dial	4
+        Transform
+        {
+    		translation        -5 3.25 -12
+            rotation 1 0 0 1.57
+            children
+            [
+				Shape
+                {
+					appearance Appearance
+                    {
+						material Material {}
+                    }
+                    geometry Cylinder
+                    {
+    	                height 0.5
+        	            radius 0.001
+            	    }
+            	}
+
+				DEF	dial4_move TouchSensor
+				{
+					
+				}
+			    
+				DEF dial4 Transform
+				{
+					translation	0 0 0
+					rotation 0 1 0 1.57
+					children
+					[	
+						# Dial 4 Body
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material 
+								{ 
+									diffuseColor .3 .3 .3 
+									specularColor .5 .5 .5
+									emissiveColor .15 .15 .15
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								height 0.5
+								radius 0.5
+							}
+						}
+						# Dial 4 Marker
+						Transform
+						{
+							translation	0.25 0.25 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+                				{
+									appearance Appearance
+                				    {
+										material Material 
+										{
+											diffuseColor .75 .75 .75
+											specularColor .5 .5 .5
+											emissiveColor .15 .15 .15
+											ambientIntensity 0
+										}
+                				    }
+                					geometry Cylinder
+                    				{
+    	                				height 0.5
+        	            				radius 0.125
+            	    				}
+            					}
+
+							]
+						}
+					]
+				}
+        	]
+	    } 			     			    
+
+        # Oven Dial	5
+        Transform
+        {
+			translation        5 3.25 -12
+            rotation 1 0 0 1.57
+            children
+            [
+				Shape
+                {
+					appearance Appearance
+                    {
+						material Material {}
+                    }
+                    geometry Cylinder
+                    {
+    	                height 0.5
+        	            radius 0.001
+            	    }
+            	}
+
+				DEF	dial5_move TouchSensor
+				{
+				
+				}
+				DEF dial5 Transform
+				{
+					translation	0 0 0
+					rotation 0 1 0 1.57
+					children
+					[	
+						# Dial 5 Body
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material 
+								{ 
+									diffuseColor .3 .3 .3 
+									specularColor .5 .5 .5
+									emissiveColor .15 .15 .15
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								height 0.5
+								radius 0.5
+							}
+						}
+						# Dial 5 Marker
+						Transform
+						{
+							translation	0.25 0.25 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+                				{
+									appearance Appearance
+                				    {
+										material Material 
+										{
+											diffuseColor .75 .75 .75
+											specularColor .5 .5 .5
+											emissiveColor .15 .15 .15
+											ambientIntensity 0
+										}
+                				    }
+                					geometry Cylinder
+                    				{
+    	                				height 0.5
+        	            				radius 0.125
+            	    				}
+            					}
+
+							]
+						}
+					]
+				}
+        	]
+	    } 			    	
+	]
+}
+
+#########################################################################################################
+#                                                    HOBS                                               #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	0 5 -13.5
+			children
+			[
+				Transform
+				{
+					translation	-3.125 0 -1.125
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0 0
+									specularColor .72 .72 .72
+									ambientIntensity 0
+									shininess .18
+								}
+							}
+							geometry Cylinder
+							{
+								radius 1
+								height 1
+							}
+						}
+						Transform
+						{
+							translation 0 0 -3.25
+							children	
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor 0 0 0
+											specularColor .72 .72 .72
+											ambientIntensity 0
+											shininess .18
+										}
+									}
+									geometry Cylinder
+									{
+										radius 1
+										height 1
+									}
+								}
+								Transform
+								{
+									translation 6.25 0 0
+									children	
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor 0 0 0
+													specularColor .72 .72 .72
+													ambientIntensity 0
+													shininess .18
+												}
+											}
+											geometry Cylinder
+											{
+												radius 1
+												height 1
+											}
+										}
+										Transform
+										{
+											translation 0 0 3.25
+											children	
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor 0 0 0
+															specularColor .72 .72 .72
+															ambientIntensity 0
+															shininess .18
+														}
+													}
+													geometry Cylinder
+													{
+														radius 1
+														height 1
+													}
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                               HOB SUPPORTS                                            #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		DEF	HobSupportMover PlaneSensor
+		{	
+			offset 0 5.5 -13.5
+			maxPosition 0 10.5
+			minPosition	0 5.5
+		}
+		DEF	Support Transform
+		{
+			translation	0 5.5 -13.5
+			rotation 0 0 1 1.57
+			children	
+			[
+				Transform
+				{
+					translation	0 0 0.5
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 12.5
+							}
+						}
+					]
+				}
+				Transform
+				{
+					translation	0 3.125 -2.75
+					rotation 1 0 0 1.57
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 6.5
+							}
+						}
+					]
+				}
+				Transform
+				{
+					translation	0 -3.125 -2.75
+					rotation 1 0 0 1.57
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 6.5
+							}
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 0 -2.75
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 12.5
+							}
+						}
+					]
+				}	
+				Transform
+				{		
+					translation	0 0 -4.35
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 12.5
+							}
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 0 -2.75
+					rotation 1 0 0 1.57
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 6.50
+							}
+						}
+						# Hob support frame vertices
+						Transform
+						{
+							translation	0 -3.25 -6.25
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .1 0
+											specularColor 1 .68 .51
+											emissiveColor .15 .13 .06
+											ambientIntensity .0833
+											shininess .07
+										}
+									}
+									geometry Sphere
+									{
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation	0 0 12.5
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .1 0
+													specularColor 1 .68 .51
+													emissiveColor .15 .13 .06
+													ambientIntensity .0833
+													shininess .07
+												}
+											}
+											geometry Sphere
+											{
+												radius 0.125
+											}
+										}
+										Transform
+										{
+											translation 0 6.5 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor .44 .1 0
+															specularColor 1 .68 .51
+															emissiveColor .15 .13 .06
+															ambientIntensity .0833
+															shininess .07
+														}
+													}
+													geometry Sphere
+													{
+														radius 0.125
+													}
+												}
+												Transform
+												{
+													translation	0 0 -12.5
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .1 0
+																	specularColor 1 .68 .51
+																	emissiveColor .15 .13 .06
+																	ambientIntensity .0833
+																	shininess .07
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+													]
+												}
+											]
+										}
+
+									]
+								}
+								# Hob Support rests 
+								# - joining hob support to the main unit
+								Transform
+								{
+									translation	-0.25 0 0
+									rotation 0 0 1 1.57
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .1 0
+													specularColor 1 .68 .51
+													emissiveColor .15 .13 .06
+													ambientIntensity .0833
+													shininess .07
+												}
+											}
+											geometry Cylinder
+											{
+												radius 0.125
+												height 0.5
+											}
+										}
+										Transform
+										{
+											translation	0 0 12.5
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor .44 .1 0
+															specularColor 1 .68 .51
+															emissiveColor .15 .13 .06
+															ambientIntensity .0833
+															shininess .07
+														}
+													}
+													geometry Cylinder
+													{
+														radius 0.125
+														height 0.5
+													}
+												}
+												Transform
+												{
+													translation	6.5 0 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .1 0
+																	specularColor 1 .68 .51
+																	emissiveColor .15 .13 .06
+																	ambientIntensity .0833
+																	shininess .07
+																}
+															}
+															geometry Cylinder
+															{
+																radius 0.125
+																height 0.5
+															}
+														}
+														Transform
+														{
+															translation	0 0 -12.5
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .1 0
+																			specularColor 1 .68 .51
+																			emissiveColor .15 .13 .06
+																			ambientIntensity .0833
+																			shininess .07
+																		}
+																	}
+																	geometry Cylinder
+																	{
+																		radius 0.125
+																		height 0.5
+																	}
+																}			
+															]		
+														}				
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 -6.25 -2.75
+					rotation 1 0 0 1.57
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 6.50
+							}
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 6.25 -2.75
+					rotation 1 0 0 1.57
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 6.50
+							}
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 0 -1.125
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 12.5
+							}
+						}
+					]
+				}
+				Transform
+				{		
+					translation	0 0 -6.0
+					children	
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .1 0
+									specularColor 1 .68 .51
+									emissiveColor .15 .13 .06
+									ambientIntensity .0833
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 12.5
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                               DIAL LABELS                                             #
+#########################################################################################################
+
+# Group 1 (Front Left)
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-5.25 2.5 -12.05
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material	
+						{
+							diffuseColor .76 .66 .29
+							specularColor .36 .38 .06
+							emissiveColor .18 .16 .07
+							ambientIntensity .0433
+							shininess .19
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.125
+					}
+				}
+				Transform
+				{
+					translation	0.5 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material	
+								{
+									diffuseColor .76 .66 .29
+									specularColor .36 .38 .06
+									emissiveColor .18 .16 .07
+									ambientIntensity .0433
+									shininess .19
+								}	
+							}
+							geometry Sphere
+							{
+								radius 0.125
+							}
+						}
+						Transform
+						{
+							translation	0 -0.5 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material	
+										{
+											diffuseColor .76 .66 .29
+											specularColor .36 .38 .06
+											emissiveColor .18 .16 .07
+											ambientIntensity .0433
+											shininess .19
+										}	
+									}
+									geometry Sphere
+									{
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation	-0.5 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material	
+												{
+													diffuseColor .55 .09 .05
+													specularColor .29 .31 .05
+													emissiveColor .21 .03 .02
+													ambientIntensity .0267
+													shininess .19
+												}	
+											}
+											geometry Sphere
+											{
+												radius 0.125
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Group 2 (Back Left)
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-2.75 2.5 -12.05
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material	
+						{
+							diffuseColor .55 .09 .05
+							specularColor .29 .31 .05
+							emissiveColor .21 .03 .02
+							ambientIntensity .0267
+							shininess .19
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.125
+					}
+				}
+				Transform
+				{
+					translation	0.5 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material	
+								{
+									diffuseColor .76 .66 .29
+									specularColor .36 .38 .06
+									emissiveColor .18 .16 .07
+									ambientIntensity .0433
+									shininess .19
+								}	
+							}
+							geometry Sphere
+							{
+								radius 0.125
+							}
+						}
+						Transform
+						{
+							translation	0 -0.5 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material	
+										{
+											diffuseColor .76 .66 .29
+											specularColor .36 .38 .06
+											emissiveColor .18 .16 .07
+											ambientIntensity .0433
+											shininess .19
+										}	
+									}
+									geometry Sphere
+									{
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation	-0.5 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material	
+												{
+													diffuseColor .76 .66 .29
+													specularColor .36 .38 .06
+													emissiveColor .18 .16 .07
+													ambientIntensity .0433
+													shininess .19
+												}	
+											}
+											geometry Sphere
+											{
+												radius 0.125
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Group 3 (Front Right)
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-0.25 2.5 -12.05
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material	
+						{
+							diffuseColor .76 .66 .29
+							specularColor .36 .38 .06
+							emissiveColor .18 .16 .07
+							ambientIntensity .0433
+							shininess .19
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.125
+					}
+				}
+				Transform
+				{
+					translation	0.5 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material	
+								{
+									diffuseColor .76 .66 .29
+									specularColor .36 .38 .06
+									emissiveColor .18 .16 .07
+									ambientIntensity .0433
+									shininess .19
+								}	
+							}
+							geometry Sphere
+							{
+								radius 0.125
+							}
+						}
+						Transform
+						{
+							translation	0 -0.5 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material	
+										{
+											diffuseColor .55 .09 .05
+											specularColor .29 .31 .05
+											emissiveColor .21 .03 .02
+											ambientIntensity .0267
+											shininess .19
+										}	
+									}
+									geometry Sphere
+									{
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation	-0.5 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material	
+												{
+													diffuseColor .76 .66 .29
+													specularColor .36 .38 .06
+													emissiveColor .18 .16 .07
+													ambientIntensity .0433
+													shininess .19
+												}	
+											}
+											geometry Sphere
+											{
+												radius 0.125
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Group 4 (Back Right)
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	2.25 2.5 -12.05
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material	
+						{
+							diffuseColor .76 .66 .29
+							specularColor .36 .38 .06
+							emissiveColor .18 .16 .07
+							ambientIntensity .0433
+							shininess .19
+						}
+					}
+					geometry Sphere
+					{
+						radius 0.125
+					}
+				}
+				Transform
+				{
+					translation	0.5 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material	
+								{
+									diffuseColor .55 .09 .05
+									specularColor .29 .31 .05
+									emissiveColor .21 .03 .02
+									ambientIntensity .0267
+									shininess .19
+								}	
+							}
+							geometry Sphere
+							{
+								radius 0.125
+							}
+						}
+						Transform
+						{
+							translation	0 -0.5 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material	
+										{
+											diffuseColor .76 .66 .29
+											specularColor .36 .38 .06
+											emissiveColor .18 .16 .07
+											ambientIntensity .0433
+											shininess .19
+										}	
+									}
+									geometry Sphere
+									{
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation	-0.5 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material	
+												{
+													diffuseColor .76 .66 .29
+													specularColor .36 .38 .06
+													emissiveColor .18 .16 .07
+													ambientIntensity .0433
+													shininess .19
+												}	
+											}
+											geometry Sphere
+											{
+												radius 0.125
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Group 5 (Oven)
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	5 2.25 -12.0
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material	
+						{
+							diffuseColor .55 .09 .05
+							specularColor .29 .31 .05
+							emissiveColor .21 .03 .02
+							ambientIntensity .0267
+							shininess .19
+						}
+					}
+					geometry Box
+					{
+						size 0.75 0.75 0.125
+					}
+				}
+			]
+		}
+	]
+}
+#########################################################################################################
+#                                               OVEN DOOR                                               #
+#########################################################################################################
+
+Group
+{
+	children
+    [
+    	Transform
+        {
+        	translation	0 -11.25 -10.0
+            rotation	0 0 1 1.57
+	        children
+    	    [
+        		Shape
+                {
+					appearance Appearance
+                	{
+						material Material 
+						{
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+                	}
+                	geometry Cylinder
+        	    	{
+            	    	radius 0.5
+                		height 15
+                	}
+                }
+                #door hinge
+                DEF movelid CylinderSensor 
+				{
+					minAngle 0 
+					maxAngle 1.57 # = 90 degrees
+				} 
+				DEF lid Transform
+                {
+                	translation     0 0 0
+                    rotation        0 1 0 0.0
+                    children
+                    [
+						# Oven Door Hinge
+                        Shape
+                        {
+                        	appearance Appearance
+                            {
+                            	material Material 
+								{
+									diffuseColor 0 0 0
+									specularColor .63 .92 1
+									ambientIntensity 0
+								}
+                            }
+                            geometry Cylinder
+                            {
+                            	radius 0.5
+                                height 15
+                            }
+                    	}
+                        # Frosted Oven Door
+                        Transform
+                        {
+                        	translation	0.0 0.0 6
+                            children
+                            [
+                            	Shape
+                                {
+									appearance Appearance
+                                	{
+                                		material Material 
+										{
+											transparency .28
+											diffuseColor .29 .29 .29
+											specularColor 1 .94 .54
+											emissiveColor .4 .4 .4
+											ambientIntensity 0
+											shininess .83
+										}
+                                	}
+                            		geometry Box
+                                	{
+                                		size 0.5 14 12.5
+                                	}
+    							}
+								# Metal Handle
+								Transform
+								{
+									translation	-1 0 5
+									rotation 0 0 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor 0 0 0
+													specularColor .63 .92 1
+													ambientIntensity 0
+												}
+											}
+											geometry Cylinder
+											{
+												radius 0.25
+												height 12
+											}
+										}
+										Transform
+										{
+											translation	0 6 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material 
+														{
+															diffuseColor 0 0 0
+															specularColor .63 .92 1
+															ambientIntensity 0
+														}
+													}
+													geometry Sphere
+													{
+														radius 0.25
+													}
+												}
+												Transform
+												{
+													translation	0.5 0 0
+													rotation 0 0 1 1.57
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material 
+																{
+																	diffuseColor 0 0 0
+																	specularColor .63 .92 1
+																	ambientIntensity 0
+																}
+															}
+															geometry Cylinder
+															{
+																radius 0.25
+																height 1
+															}
+														}
+													]
+												}
+											]
+										}
+										Transform
+										{
+											translation	0 -6 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+													 	material Material
+													    {
+															diffuseColor 0 0 0
+															specularColor .63 .92 1
+															ambientIntensity 0
+														}
+													}
+													geometry Sphere
+													{
+													 	radius 0.25
+													}
+												}
+												Transform
+												{
+													translation	0.5 0 0
+													rotation 0 0 1 1.57
+													children
+													[
+													 	Shape
+													 	{
+													 		appearance Appearance
+													 		{
+													 			material Material 
+																{
+																	diffuseColor 0 0 0
+																	specularColor .63 .92 1
+																	ambientIntensity 0
+																}
+													 		}
+													 		geometry Cylinder
+													 		{
+													  			radius 0.25
+													 			height 1
+													 		}
+													 	}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+                    	}
+        			]
+                }
+			]
+    	}
+	]
+}
+
+#########################################################################################################
+#                                            SHELVING MOUNTS                                            #
+#########################################################################################################
+
+# Lower mounts
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-7 -7.5 -15
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 10
+					}
+				}
+				Transform
+				{
+					translation	14 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{	
+									diffuseColor 0 0 0
+									specularColor .63 .92 1
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 10
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Middle mounts
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-7 -5 -15
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 10
+					}
+				}
+				Transform
+				{
+					translation	14 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{	
+									diffuseColor 0 0 0
+									specularColor .63 .92 1
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 10
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Upper mounts
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	-7 -2.5 -15
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 10
+					}
+				}
+				Transform
+				{
+					translation	14 0 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{	
+									diffuseColor 0 0 0
+									specularColor .63 .92 1
+									ambientIntensity 0
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 10
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                                SHELVES                                                #
+#########################################################################################################
+
+# Upper
+Group
+{
+	children
+	[
+		DEF MoveShelf1 TouchSensor
+		{
+
+		}
+		DEF Shelf1 Transform
+		{
+			translation	0 -2.25 -14.65
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor .44 .15 0
+							specularColor .78 .69 .4
+							ambientIntensity 0
+							shininess .12
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 8.5
+					}
+				}
+				Transform
+				{
+					translation	0 0 0
+					rotation 0 0 1 1.57
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .15 0
+									specularColor .78 .69 .4
+									ambientIntensity 0
+									shininess .12
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 13.75
+							}
+						}
+						Transform
+						{
+							translation	 0 1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	 0 -1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation -4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation 4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation -1.0625 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -2.125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -3.1875 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -7.4375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -6.375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -5.3125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -4.25 6.875 0
+									rotation 0 0 1 1.57
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 8.5
+												radius 0.125
+											}
+										}
+										Transform
+										{
+											translation	-13.75 0 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor .44 .15 0
+															specularColor .78 .69 .4
+															ambientIntensity 0
+															shininess .12
+														}
+													}
+													geometry Cylinder
+													{
+														radius 0.125
+														height 8.5
+													}
+												}
+												Transform
+												{
+													translation	0 4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+												Transform
+												{
+													translation	0 -4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Middle
+Group
+{
+	children
+	[
+		DEF MoveShelf2 TouchSensor
+		{
+			 
+		}
+		DEF Shelf2 Transform
+		{
+			translation	0 -4.75 -14.65
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor .44 .15 0
+							specularColor .78 .69 .4
+							ambientIntensity 0
+							shininess .12
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 8.5
+					}
+				}
+				Transform
+				{
+					translation	0 0 0
+					rotation 0 0 1 1.57
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .15 0
+									specularColor .78 .69 .4
+									ambientIntensity 0
+									shininess .12
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 13.75
+							}
+						}
+						Transform
+						{
+							translation	 0 1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	 0 -1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation -4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation 4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation -1.0625 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -2.125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -3.1875 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -7.4375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -6.375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -5.3125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -4.25 6.875 0
+									rotation 0 0 1 1.57
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 8.5
+												radius 0.125
+											}
+										}
+										Transform
+										{
+											translation	-13.75 0 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor .44 .15 0
+															specularColor .78 .69 .4
+															ambientIntensity 0
+															shininess .12
+														}
+													}
+													geometry Cylinder
+													{
+														radius 0.125
+														height 8.5
+													}
+												}
+												Transform
+												{
+													translation	0 4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+												Transform
+												{
+													translation	0 -4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+# Lower
+Group
+{
+	children
+	[
+		DEF MoveShelf3 TouchSensor
+		{
+			 
+		}
+		DEF Shelf3 Transform
+		{
+			translation	0 -7.35 -14.65
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor .44 .15 0
+							specularColor .78 .69 .4
+							ambientIntensity 0
+							shininess .12
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.125
+						height 8.5
+					}
+				}
+				Transform
+				{
+					translation	0 0 0
+					rotation 0 0 1 1.57
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .44 .15 0
+									specularColor .78 .69 .4
+									ambientIntensity 0
+									shininess .12
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.125
+								height 13.75
+							}
+						}
+						Transform
+						{
+							translation	 0 1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	 0 -1.71875 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -3.4375 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation	0 -5.15625 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.125
+										height 8.5
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation -4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+							]
+						}
+						Transform
+						{
+							translation 4.25 0 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .44 .15 0
+											specularColor .78 .69 .4
+											ambientIntensity 0
+											shininess .12
+										}
+									}
+									geometry Cylinder
+									{
+										height 13.75
+										radius 0.125
+									}
+								}
+								Transform
+								{
+									translation -1.0625 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -2.125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -3.1875 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -7.4375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -6.375 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -5.3125 0 0
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 13.75
+												radius 0.125
+											}
+										}
+									]
+								}
+								Transform
+								{
+									translation -4.25 6.875 0
+									rotation 0 0 1 1.57
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .44 .15 0
+													specularColor .78 .69 .4
+													ambientIntensity 0
+													shininess .12
+												}
+											}
+											geometry Cylinder
+											{
+												height 8.5
+												radius 0.125
+											}
+										}
+										Transform
+										{
+											translation	-13.75 0 0
+											children
+											[
+												Shape
+												{
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor .44 .15 0
+															specularColor .78 .69 .4
+															ambientIntensity 0
+															shininess .12
+														}
+													}
+													geometry Cylinder
+													{
+														radius 0.125
+														height 8.5
+													}
+												}
+												Transform
+												{
+													translation	0 4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+												Transform
+												{
+													translation	0 -4.25 0
+													children
+													[
+														Shape
+														{
+															appearance Appearance
+															{
+																material Material
+																{
+																	diffuseColor .44 .15 0
+																	specularColor .78 .69 .4
+																	ambientIntensity 0
+																	shininess .12
+																}
+															}
+															geometry Sphere
+															{
+																radius 0.125
+															}
+														}
+														Transform
+														{
+															translation	13.75 0 0
+															children
+															[
+																Shape
+																{
+																	appearance Appearance
+																	{
+																		material Material
+																		{
+																			diffuseColor .44 .15 0
+																			specularColor .78 .69 .4
+																			ambientIntensity 0
+																			shininess .12
+																		}
+																	}
+																	geometry Sphere
+																	{
+																		radius 0.125
+																	}
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                             FAN COMPONENTS                                            #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		Transform
+		{
+			translation	0 -5 -19.5
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material 
+						{
+							diffuseColor .38 .35 .35
+							specularColor .76 .74 .59
+							ambientIntensity .0933
+							shininess .07
+						}
+					}
+					geometry Cylinder
+					{
+						height 0.125
+						radius 2
+					}
+				}
+
+				DEF fanSensor CylinderSensor
+				{
+					# Allow 360 degree action
+					enabled	TRUE
+				}
+
+				DEF fan Transform
+				{
+					translation	0 0 0
+					rotation 0 0 1 6.28
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .5 .26 .21
+									specularColor .76 .73 .23
+									emissiveColor .07 .07 .07
+									ambientIntensity .0633
+									shininess .07
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.25
+								height 1
+							}
+						}
+						Transform
+						{
+							translation 0 0 0
+							rotation 0 0 1 1.57
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor .5 .26 .21
+											specularColor .76 .73 .23
+											emissiveColor .07 .07 .07
+											ambientIntensity .0633
+											shininess .07
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.25
+										height 4
+									}
+								}
+								Transform
+								{
+									translation 0 0 0
+									rotation 1 0 0 1.57
+									children
+									[
+										Shape
+										{
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor .5 .26 .21
+													specularColor .76 .73 .23
+													emissiveColor .07 .07 .07
+													ambientIntensity .0633
+													shininess .07
+												}
+											}
+											geometry Cylinder
+											{
+												radius 0.25
+												height 4
+											}
+										}
+									]
+								}
+							]
+						}
+
+					]
+				}
+
+			]
+
+		}
+	]
+}
+
+#########################################################################################################
+#                                            HEATING ELEMENTS                                           #
+#########################################################################################################
+
+Group 
+{
+	children 
+	[
+		#centre heating element 
+		Transform 
+		{
+			translation	0 0.5 -15
+			rotation 0 0 1 1.57
+			
+			children 
+			[
+				DEF Heater Shape 
+				{
+					appearance Appearance 
+					{
+						material DEF HeaterColor3 Material 
+						{
+							emissiveColor 0 0 0
+						}
+					}
+					geometry Cylinder 
+					{ 
+						radius 0.2
+						height 15			
+					}
+				}
+				#front heating element 
+				Transform 
+				{
+					translation	0 0 2
+					rotation 0 0 0 0
+					children 
+					[
+						Shape 
+						{
+							appearance Appearance 
+							{
+								material DEF HeaterColor2 Material 
+								{
+									emissiveColor 0 0 0
+								}
+							}
+							geometry Cylinder 
+							{ 
+								radius 0.2
+								height 15			
+							}
+						}
+						#rear heating element 
+						Transform 
+						{
+							translation	0 0 -4
+							rotation 0 0 0 0
+							children 
+							[
+								Shape 
+								{
+									appearance Appearance 
+									{
+										material DEF HeaterColor Material 
+										{ 
+											emissiveColor 0 0 0
+										}
+									}
+									geometry Cylinder 
+									{ 
+										radius 0.2
+										height 15			
+									}
+								}
+								DEF	HeaterOn ColorInterpolator
+								{
+									key	[0 1 0]
+									keyValue [0.0 0.0 0.0
+										1.0 0.0 0.0]
+								}
+								DEF Clock TimeSensor 
+								{
+									cycleInterval 0.2
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+#########################################################################################################
+#                                                  FIRE                                                 #
+#########################################################################################################
+
+Group
+{
+	children
+	[
+		# FRONT LEFT
+		DEF flame4 Transform
+		{
+			translation	-2.9 3.5 -14.35
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape 
+				{
+					appearance Appearance 
+					{
+						material Material 
+						{
+							diffuseColor 0 .631 .8
+							specularColor .502 .502 .502
+							emissiveColor 0 .118 .149
+							ambientIntensity 0
+						}
+					}	
+					geometry Extrusion 
+					{
+						beginCap FALSE
+						endCap FALSE
+						spine 
+						[
+							.9 -.3 0, .35 -1.25263 0, -.75 -1.25263 0, -1.3 -.3 0, -.75 .652628 0,
+							.35 .652628 0, .9 -.3 0
+						]
+						crossSection 
+						[
+							.14974 -.0146897, .15614 -.073542, .13729 -.125297, .10229 -.179902, .00322226 -.347435, -.00794828 -.346059,
+							-.0127791 -.340837, -.0250387 -.313044, -.0453978 -.24795, -.0812505 -.169856, -.0950212 -.124444, -.110081 -.0712674,
+							-.120361 -.0146897, -.110081 .041888, -.100342 .051821, -.0828256 .065402, -.0801872 .0751575, -.0808054 .0898523,
+							-.14617 .2887, -.133717 .502064, -.125171 .51402, -.121796 .515099, -.118142 .514543, -.114201 .512244, -.102448 .497856,
+							.0663713 .121901, .0916445 .0852673, .0967386 .0840891, .0986455 .0850571, .101722 .088444, .106125 .0921622,
+							.10797 .0917079, .110185 .0898523, .13946 .041888, .14974 -.0146897
+						]
+						creaseAngle 3.14
+					}
+				}
+			]
+		}
+
+		# BACK LEFT
+		DEF flame3 Transform
+		{
+			translation	-2.9 3.5 -17.55
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape 
+				{
+					appearance Appearance 
+					{
+						material Material 
+						{	
+							diffuseColor 0 .631 .8
+							specularColor .502 .502 .502
+							emissiveColor 0 .118 .149
+							ambientIntensity 0
+						}
+					}	
+					geometry Extrusion 
+					{
+						beginCap FALSE
+						endCap FALSE
+						spine 
+						[
+							.9 -.3 0, .35 -1.25263 0, -.75 -1.25263 0, -1.3 -.3 0, -.75 .652628 0,
+							.35 .652628 0, .9 -.3 0
+						]
+						crossSection 
+						[
+							.14974 -.0146897, .15614 -.073542, .13729 -.125297, .10229 -.179902, .00322226 -.347435, -.00794828 -.346059,
+							-.0127791 -.340837, -.0250387 -.313044, -.0453978 -.24795, -.0812505 -.169856, -.0950212 -.124444, -.110081 -.0712674,
+							-.120361 -.0146897, -.110081 .041888, -.100342 .051821, -.0828256 .065402, -.0801872 .0751575, -.0808054 .0898523,
+							-.14617 .2887, -.133717 .502064, -.125171 .51402, -.121796 .515099, -.118142 .514543, -.114201 .512244, -.102448 .497856,
+							.0663713 .121901, .0916445 .0852673, .0967386 .0840891, .0986455 .0850571, .101722 .088444, .106125 .0921622,
+							.10797 .0917079, .110185 .0898523, .13946 .041888, .14974 -.0146897
+						]
+						creaseAngle 3.14
+					}
+				}
+			]
+		}
+
+		# FRONT RIGHT
+		DEF flame2 Transform
+		{
+			translation	3.3 3.5 -14.35
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape 
+				{
+					appearance Appearance 
+					{
+						material Material 
+						{
+							diffuseColor 0 .631 .8
+							specularColor .502 .502 .502
+							emissiveColor 0 .118 .149
+							ambientIntensity 0
+						}
+					}	
+					geometry Extrusion 
+					{
+						beginCap FALSE
+						endCap FALSE
+						spine 
+						[
+							.9 -.3 0, .35 -1.25263 0, -.75 -1.25263 0, -1.3 -.3 0, -.75 .652628 0,
+							.35 .652628 0, .9 -.3 0
+						]
+						crossSection 
+						[
+							.14974 -.0146897, .15614 -.073542, .13729 -.125297, .10229 -.179902, .00322226 -.347435, -.00794828 -.346059,
+							-.0127791 -.340837, -.0250387 -.313044, -.0453978 -.24795, -.0812505 -.169856, -.0950212 -.124444, -.110081 -.0712674,
+							-.120361 -.0146897, -.110081 .041888, -.100342 .051821, -.0828256 .065402, -.0801872 .0751575, -.0808054 .0898523,
+							-.14617 .2887, -.133717 .502064, -.125171 .51402, -.121796 .515099, -.118142 .514543, -.114201 .512244, -.102448 .497856,
+							.0663713 .121901, .0916445 .0852673, .0967386 .0840891, .0986455 .0850571, .101722 .088444, .106125 .0921622,
+							.10797 .0917079, .110185 .0898523, .13946 .041888, .14974 -.0146897
+						]
+						creaseAngle 3.14
+					}
+				}
+			]
+		}
+
+		# BACK RIGHT
+		DEF flame1 Transform
+		{
+			translation	3.3 3.5 -17.55
+			rotation 1 0 0 1.57
+			children
+			[
+				Shape 
+				{
+					appearance Appearance 
+					{
+						material Material 
+						{
+							diffuseColor 0 .631 .8
+							specularColor .502 .502 .502
+							emissiveColor 0 .118 .149
+							ambientIntensity 0
+						}
+					}	
+					geometry Extrusion 
+					{
+						beginCap FALSE
+						endCap FALSE
+						spine 
+						[
+							.9 -.3 0, .35 -1.25263 0, -.75 -1.25263 0, -1.3 -.3 0, -.75 .652628 0,
+							.35 .652628 0, .9 -.3 0
+						]
+						crossSection 
+						[
+							.14974 -.0146897, .15614 -.073542, .13729 -.125297, .10229 -.179902, .00322226 -.347435, -.00794828 -.346059,
+							-.0127791 -.340837, -.0250387 -.313044, -.0453978 -.24795, -.0812505 -.169856, -.0950212 -.124444, -.110081 -.0712674,
+							-.120361 -.0146897, -.110081 .041888, -.100342 .051821, -.0828256 .065402, -.0801872 .0751575, -.0808054 .0898523,
+							-.14617 .2887, -.133717 .502064, -.125171 .51402, -.121796 .515099, -.118142 .514543, -.114201 .512244, -.102448 .497856,
+							.0663713 .121901, .0916445 .0852673, .0967386 .0840891, .0986455 .0850571, .101722 .088444, .106125 .0921622,
+							.10797 .0917079, .110185 .0898523, .13946 .041888, .14974 -.0146897
+						]
+						creaseAngle 3.14
+					}
+				}
+			]
+		}
+	]
+}
+
+
+
+##############################################################
+#                           HOB 1							 #
+##############################################################
+
+
+Group
+{
+	children	
+	[
+		DEF Flame1Interpolator PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [-2.9 2.5 -14.35 -2.9 5.5 -14.35 -2.9 3.5 -14.35]
+		}
+
+		DEF	DialInterpolatorHob1 OrientationInterpolator
+		{
+			key 		[0 0.5 1] 
+			keyValue	[0 1 0 1.57, 0 1 0 0, 0 1 0 1.57]
+		}
+
+		DEF	Flame1Time TimeSensor
+		{
+		   cycleInterval 0.1
+		   enabled FALSE
+		   loop	TRUE
+		}
+		
+		DEF	Flame1Switch Script
+		{
+			url	"javascript:
+			function onOff(on_off)
+			{
+				f1status = (!f1status)
+				if(f1status)
+				{
+					f1status=1;
+				}
+				else
+				{
+					f1status=0;
+				}
+			}"
+			eventIn	SFTime onOff
+			eventOut SFBool	f1status
+		}
+		
+		DEF	DialTimeHob1 TimeSensor
+		{
+			loop FALSE
+			enabled	TRUE
+			cycleInterval 2.0
+		}
+
+	]
+}
+
+##############################################################
+#                           HOB 2							 #
+##############################################################
+
+Group
+{
+	children
+	[
+	   	DEF	Flame2Interpolator PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [3.3 3.5 -14.35, 3.3 5.5 -14.35, 3.3 3.5 -14.35 ]
+		}
+
+		DEF	Flame2Time TimeSensor
+		{
+			cycleInterval 0.1
+			enabled	FALSE
+			loop TRUE
+		}
+
+		DEF	DialInterpolatorHob2 OrientationInterpolator
+		{
+			key 		[0 0.5 1] 
+			keyValue	[0 1 0 1.57, 0 1 0 0, 0 1 0 1.57]
+		}
+
+		DEF	Flame2Switch Script
+		{
+			url	"javascript:
+			function onOff2(on_off)
+			{
+				f2status = (!f2status)
+				if(f2status)
+				{
+					f2status=1;
+				}
+				else
+				{
+					f2status=0;
+				}
+			}"
+			eventIn	SFTime onOff2
+			eventOut SFBool	f2status
+		}
+
+		DEF	DialTimeHob2 TimeSensor
+		{
+			loop FALSE
+			enabled	TRUE
+			cycleInterval 2.0
+		}
+	]
+}
+
+##############################################################
+#                           HOB 3							 #
+##############################################################
+
+Group
+{
+	children
+	[
+	   	DEF	Flame3Interpolator PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [-2.9 5.5 -17.55 -2.9 3.5 -17.55 ]
+		}
+
+		DEF	Flame3Time TimeSensor
+		{
+			cycleInterval 0.1
+			enabled	FALSE
+			loop TRUE
+		}
+
+		DEF	DialInterpolatorHob3 OrientationInterpolator
+		{
+			key 		[0 0.5 1] 
+			keyValue	[0 1 0 1.57, 0 1 0 0, 0 1 0 1.57]
+		}
+
+		DEF	DialTimeHob3 TimeSensor
+		{
+			loop FALSE
+			enabled	TRUE
+			cycleInterval 2.0
+		}
+
+		DEF	Flame3Switch Script
+		{
+			url	"javascript:
+			function onOff3(on_off)
+			{
+				f3status = (!f3status)
+				if(f3status)
+				{
+					f3status=1;
+				}
+				else
+				{
+					f3status=0;
+				}
+				//print('f3status = ', f3status);
+			}"
+			eventIn	SFTime onOff3
+			eventOut SFBool	f3status
+		}
+	]
+}
+
+##############################################################
+#                           HOB 4							 #
+##############################################################
+
+Group 
+{
+	children
+	[
+		DEF	Flame4Interpolator PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [3.3 3.5 -17.55, 3.3 5.5 -17.55, 3.3 3.5 -17.55]
+		}
+
+		DEF	Flame4Time TimeSensor
+		{
+			cycleInterval 0.1
+			enabled	FALSE
+			loop TRUE
+		}
+
+		DEF	DialInterpolatorHob4 OrientationInterpolator
+		{
+			key 		[0 0.5 1] 
+			keyValue	[0 1 0 1.57, 0 1 0 0, 0 1 0 1.57]
+		}
+
+		DEF	DialTimeHob4 TimeSensor
+		{
+			loop FALSE
+			enabled	TRUE
+			cycleInterval 2.0
+		}
+		
+		DEF	Flame4Switch Script
+		{
+			url	"javascript:
+			function onOff4(on_off)
+			{
+				f4status = (!f4status)
+				if(f4status)
+				{
+					f4status=1;
+				}
+				else
+				{
+					f4status=0;
+				}
+			}"
+			eventIn	SFTime onOff4
+			eventOut SFBool	f4status
+		}
+	]
+}
+
+##############################################################
+#                           OVEN 1							 #
+##############################################################
+
+Group 
+{
+	children
+	[
+		DEF	DialTime TimeSensor
+		{
+			cycleInterval 2.0
+			loop FALSE	
+			enabled	TRUE
+		}
+
+		DEF	DialInterpolatorOven OrientationInterpolator
+		{
+			key 		[0 0.5 1] 
+			keyValue	[0 1 0 1.57, 0 1 0 0, 0 1 0 1.57]
+		}
+		DEF Heaterswitch Script 
+		{
+			url	"javascript:
+			function set_onOff(onOff)
+			{
+				switchState=!(switchState)
+				if(switchState) 
+				{
+					color_Changed[0]=1;	// R
+					color_Changed[1]=0;	// G
+					color_Changed[2]=0;	// B
+				}
+				else
+				{
+					color_Changed[0]=0; // R
+					color_Changed[1]=0;	// G
+					color_Changed[2]=0;	// B
+				}
+				//print('switchstate = ', switchState);
+			}"
+			eventIn	SFTime set_onOff
+			eventOut SFColor color_Changed
+			eventOut SFBool	switchState
+			field SFBool switchState FALSE
+		}
+
+		DEF FanMover Script 
+		{
+			url	"javascript:
+			function set_fraction(fraction,eventTime) 
+			{
+				//print('fantimer = ',eventTime);
+				t=fraction;
+				oneminust=1-t;
+				value_changed[0]=0; // X Axis
+				value_changed[1]=1;	// Y Axis
+				value_changed[2]=0;	// Z Axis
+				value_changed[3]=((oneminust*oneminust)*startx)+((t*t)*endx); // Rotation angle
+			}"
+			eventIn	SFFloat set_fraction
+			eventOut SFRotation	value_changed
+			field SFFloat startx 0.0
+			field SFFloat endx 6.28
+			field SFFloat t 0.0
+		}
+
+		DEF	FanSwitch Script
+		{
+			url	"javascript:
+			function onOff(on_off)
+			{
+				toggle = (!toggle)
+				if(toggle)
+				{
+					toggle=1;
+				}
+				else
+				{
+					toggle=0;
+				}
+			}"
+			eventIn	SFTime onOff
+			eventOut SFBool	toggle
+			field SFBool toggle	FALSE
+		}
+
+		DEF FanMove OrientationInterpolator	
+		{
+			key			[0 1]
+			keyValue	[0 0 1 0, 0 0 1 3.14, 0 0 1 0]
+		}
+
+		DEF FanTime TimeSensor 
+		{
+			cycleInterval 0.2
+			loop TRUE
+			enabled FALSE
+		}
+	]
+}
+
+
+##############################################################
+#                         SHELVING							 #
+##############################################################
+
+Group
+{
+	children
+	[
+		DEF	Shelf1_INT PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [0 -2.25 -14.65, 0 -2.25 0, 0 -2.25 -14.65]
+		}
+
+		DEF	Shelf2_INT PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [0 -4.75 -14.65, 0 -4.75 0, 0 -4.75 -14.65]
+		}
+
+		DEF	Shelf3_INT PositionInterpolator
+		{
+			key	[0 0.5 1]
+			keyValue [0 -7.35 -14.65, 0 -7.35 0, 0 -7.35 -14.65]
+		}
+
+		DEF	ShelfTime1 TimeSensor
+		{
+			cycleInterval 7.5
+		}
+
+		DEF	ShelfTime2 TimeSensor
+		{
+			cycleInterval 7.5
+		}
+
+		DEF	ShelfTime3 TimeSensor
+		{
+			cycleInterval 7.5
+		}
+	]
+}
+
+
+#########################################################################################################
+#                                                 ROUTES                                                #
+#########################################################################################################
+
+ROUTE movelid.rotation_changed  TO lid.rotation
+
+
+# ---------------------------- SHELVES ---------------------------------
+
+ROUTE MoveShelf1.touchTime TO ShelfTime1.startTime
+ROUTE ShelfTime1.fraction_changed TO Shelf1_INT.set_fraction
+ROUTE Shelf1_INT.value_changed TO Shelf1.set_translation
+
+ROUTE MoveShelf2.touchTime TO ShelfTime2.startTime
+ROUTE ShelfTime2.fraction_changed TO Shelf2_INT.set_fraction
+ROUTE Shelf2_INT.value_changed TO Shelf2.set_translation
+
+ROUTE MoveShelf3.touchTime TO ShelfTime3.startTime
+ROUTE ShelfTime3.fraction_changed TO	Shelf3_INT.set_fraction
+ROUTE Shelf3_INT.value_changed TO Shelf3.set_translation
+
+
+# ---------------------------- DIALS -----------------------------------
+
+ROUTE dial1_move.touchTime TO DialTimeHob4.startTime
+ROUTE DialTimeHob4.fraction_changed TO DialInterpolatorHob4.set_fraction
+ROUTE DialInterpolatorHob4.value_changed TO	dial1.rotation
+
+ROUTE dial2_move.touchTime TO DialTimeHob3.startTime
+ROUTE DialTimeHob3.fraction_changed TO DialInterpolatorHob3.set_fraction
+ROUTE DialInterpolatorHob3.value_changed TO	dial2.rotation
+
+ROUTE dial3_move.touchTime TO DialTimeHob2.startTime
+ROUTE DialTimeHob2.fraction_changed TO DialInterpolatorHob2.set_fraction
+ROUTE DialInterpolatorHob2.value_changed TO	dial3.rotation
+
+ROUTE dial4_move.touchTime TO DialTimeHob1.startTime
+ROUTE DialTimeHob1.fraction_changed TO DialInterpolatorHob1.set_fraction
+ROUTE DialInterpolatorHob1.value_changed TO	dial4.rotation
+
+ROUTE dial5_move.touchTime TO  DialTime.startTime
+ROUTE DialTime.fraction_changed	TO DialInterpolatorOven.set_fraction
+ROUTE DialInterpolatorOven.value_changed TO	dial5.rotation
+
+# ---------------------------- FLAMES -----------------------------------
+
+ROUTE dial4_move.touchTime TO Flame1Switch.onOff
+ROUTE Flame1Switch.f1status	TO Flame1Time.enabled
+ROUTE Flame1Time.fraction_changed TO Flame1Interpolator.set_fraction
+ROUTE Flame1Interpolator.value_changed TO flame4.set_translation
+
+ROUTE dial2_move.touchTime TO Flame3Switch.onOff3
+ROUTE Flame3Switch.f3status	TO Flame3Time.enabled
+ROUTE Flame3Time.fraction_changed TO Flame3Interpolator.set_fraction
+ROUTE Flame3Interpolator.value_changed TO flame3.set_translation
+
+ROUTE dial3_move.touchTime TO Flame2Switch.onOff2
+ROUTE Flame2Switch.f2status	TO Flame2Time.enabled
+ROUTE Flame2Time.fraction_changed TO Flame2Interpolator.set_fraction
+ROUTE Flame2Interpolator.value_changed TO flame2.set_translation
+
+ROUTE dial1_move.touchTime TO Flame4Switch.onOff4
+ROUTE Flame4Switch.f4status	TO Flame4Time.enabled
+ROUTE Flame4Time.fraction_changed TO Flame4Interpolator.set_fraction
+ROUTE Flame4Interpolator.value_changed TO flame1.set_translation
+
+# ---------------------------- HEATER SWITCH ----------------------------
+
+ROUTE dial5_move.touchTime TO Heaterswitch.set_onOff
+ROUTE Heaterswitch.color_Changed TO	HeaterColor.emissiveColor
+ROUTE Heaterswitch.color_Changed TO	HeaterColor2.emissiveColor
+ROUTE Heaterswitch.color_Changed TO	HeaterColor3.emissiveColor
+
+# ---------------------------- FAN ACTION -------------------------------
+
+ROUTE dial5_move.touchTime TO FanSwitch.onOff
+ROUTE FanSwitch.toggle TO FanTime.enabled
+ROUTE FanTime.isActive TO fanSensor.enabled
+ROUTE FanTime.fraction_changed TO FanMover.set_fraction
+ROUTE FanMover.value_changed TO	fan.rotation
+
+# ---------------------------- HOB SUPPORT ------------------------------
+
+ROUTE HobSupportMover.translation_changed TO Support.translation
